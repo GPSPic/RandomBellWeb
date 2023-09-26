@@ -1,13 +1,20 @@
 import { useState } from "react";
+import styled from 'styled-components'
+
+import './Container.css'
 import SmallText from "../components/texts/SmallText";
 
+
 const Container = () => {
-      const [darkTheme, setDarkTheme] = useState(false)
+      const [darkTheme, setDarkTheme] = useState(true)
+      // const trying = 
+
   return (
-    <>
-              <SmallText darkTheme={darkTheme} />
-    </>
+    <div className={"darktheme-" + darkTheme.toString()}>
+      <SmallText darkTheme={darkTheme} />
+    </div>
   );
 };
 
 export default Container;
+
