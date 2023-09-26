@@ -1,8 +1,9 @@
-const ThemeSwitchButton = ({switchTheme}) => {
+import { moon,sun } from "../../helpers/icon";
+const ThemeSwitchButton = ({ switchTheme, darkTheme }) => {
     return (  
         <>
-            <button>
-                Icon
+            <button onClick={switchTheme}>
+                {darkTheme ? sun: moon }
             </button>
         </>
     );

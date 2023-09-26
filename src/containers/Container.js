@@ -11,9 +11,12 @@ const Container = () => {
 
   const containerClass = "darktheme-" + darkTheme.toString() 
 
+  const switchTheme = function () {
+    setDarkTheme(!darkTheme)
+  }
   return (
     <div className={containerClass}>
-      <ThemeSwitchButton />
+      <ThemeSwitchButton switchTheme = {switchTheme} darkTheme={darkTheme}/>
       <SmallText darkTheme={darkTheme} />
     </div>
   );
