@@ -1,11 +1,15 @@
 import styled from 'styled-components';
-import './SmallText.css';
-// import { defaultDarkText, defaultBrightText } from "../../helpers/colours.js";
+import { defaultDarkText, defaultBrightText } from "../../helpers/colours.js";
 
+const Small = styled.h5`
+  color: ${function(props) {return props['data-darktheme'] ? defaultDarkText : defaultBrightText}};
+  font-size: 32px;
+`
 
 const SmallText = ({ darkTheme }) => {
+
   return (
-    <h5>Small Text</h5>
+    <Small data-darktheme={darkTheme}>Small Text</Small>
   );
 };
 
