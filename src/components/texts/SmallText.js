@@ -1,15 +1,21 @@
-import styled from 'styled-components';
-import { defaultDarkText, defaultBrightText } from "../../helpers/colours.js";
+import { useContext } from "react";
+import { ThemeContext } from "../../containers/Container";
+import './text.css'
 
-
-const SmallText = () => {
+const SmallText = ({text}) => {
+  const theme = useContext(ThemeContext)
+  const textTheme = 'text-' + theme
 
   return (
-    <h5 color='white'>Small Text</h5>
+    <p className={`${textTheme} small-text`}>{text}</p>
   );
 };
 
 export default SmallText;
+
+// import styled from 'styled-components';
+
+// import { defaultDarkText, defaultBrightText } from "../../helpers/colours.js";
 
   // const Small = styled.h5`
   //   color: ${function(props) {return props['data-darktheme'] ? defaultDarkText : defaultBrightText}};
