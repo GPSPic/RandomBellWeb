@@ -7,9 +7,7 @@ import SmallText from "../texts/SmallText";
 const ThemeSwitchButton = ({ switchTheme }) => {
     const theme = useContext(ThemeContext)
     const buttonText = theme === "dark" ? "Light Theme" : "Dark Theme"
-    const buttonBackground = "button-" + theme
-    console.log(buttonBackground);
-   
+    const buttonBackground = "button-" + theme   
 
     return (  
         <>

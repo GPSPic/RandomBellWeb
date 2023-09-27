@@ -1,14 +1,12 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../containers/Container";
-import './text.css'
+import "./text.css";
 
-const LargeText = ({text}) => {
-  const theme = useContext(ThemeContext)
-  const textTheme = 'text-' + theme
+const LargeText = ({ text }) => {
+  const theme = useContext(ThemeContext);
+  const textTheme = "text-" + theme;
 
-  return (
-    <p className={`${textTheme} large-text`}>{text}</p>
-  );
+  return <p className={`${textTheme} large-text`}>{text}</p>;
 };
 
 export default LargeText;
