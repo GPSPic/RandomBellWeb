@@ -1,9 +1,16 @@
+import { useContext } from "react";
 import { moon,sun } from "../../helpers/icon";
-const ThemeSwitchButton = ({ switchTheme, darkTheme }) => {
+import { ThemeContext } from "../../containers/Container";
+
+const ThemeSwitchButton = ({ switchTheme }) => {
+    const theme = useContext(ThemeContext)
+    console.log(theme)
+    const buttonTheme = 'button-' + theme;
+
     return (  
         <>
-            <button onClick={switchTheme}>
-                {darkTheme ? sun: moon }
+            <button onClick={switchTheme} className="buttonTheme">
+                {theme === 'dark' ? sun : moon}
             </button>
         </>
     );

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, createContext } from "react";
 import styled from 'styled-components'
 
 import './Container.css'
@@ -6,19 +6,31 @@ import SmallText from "../components/texts/SmallText";
 import ThemeSwitchButton from "../components/buttons/ThemeSwitchButton";
 
 
-const Container = () => {
-  const [darkTheme, setDarkTheme] = useState(true)
+export const ThemeContext = createContext(null)
 
-  const containerClass = "darktheme-" + darkTheme.toString() 
+const Container = () => {
+  const [theme, setTheme] = useState('dark')
+  console.log('theme in container: ' + theme)
+
+  const containerThemeClass = "container-" + theme
 
   const switchTheme = function () {
-    setDarkTheme(!darkTheme)
+    if (theme === "dark") {
+      setTheme("light")
+    } else {
+      setTheme("dark")
+    }
+ 
   }
   return (
-    <div className={containerClass}>
-      <ThemeSwitchButton switchTheme = {switchTheme} darkTheme={darkTheme}/>
-      <SmallText darkTheme={darkTheme} />
-    </div>
+    <ThemeContext.Provider value={theme}>
+      <div className={containerThemeClass}>
+        <ThemeSwitchButton switchTheme = {switchTheme} />
+        <SmallText />
+        {/* <RegularText/>
+        <BigText /> */}
+      </div>
+    </ThemeContext.Provider>
   );
 };
 

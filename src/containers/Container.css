@@ -1,7 +1,7 @@
-.darktheme-true {
+.container-dark {
     background-color: #000000;
 }
 
-.darktheme-false {
+.container-light {
     background-color: #fff;
 }
