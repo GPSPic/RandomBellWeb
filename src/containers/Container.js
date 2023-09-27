@@ -9,7 +9,7 @@ import LargeText from "../components/texts/LargeText";
 import ThemeSwitchButton from "../components/buttons/ThemeSwitchButton";
 import HomePage from "../components/HomePage/HomePage";
 import PageNotFound from "../components/PageNotFound";
-import About from "../components/Menu/About";
+import About from "../components/HomePage/About";
 import Footer from "../components/Menu/Footer";
 import Header from "../components/Menu/Header";
 
@@ -29,11 +29,11 @@ const Container = () => {
   };
 
   return (
-    <div className={containerThemeClass}>
+    <div className={`${containerThemeClass} main-page`}>
       <ThemeContext.Provider value={theme}>
         <Router>
           <Header switchTheme={switchTheme}/>
-          <Routes>
+          <Routes className="container-flexbox">
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<About />} />
             <Route path="/*" element={<PageNotFound />} />

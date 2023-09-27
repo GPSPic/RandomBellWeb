@@ -1,0 +1,16 @@
+footer {
+    flex-shrink: 0;
+}
+
+header {
+    flex-shrink: 0;
+    display: flex;
+}
+
+.home-link {
+    flex: 1;
+}
+
+.theme-switch {
+    flex: 1;
+}
