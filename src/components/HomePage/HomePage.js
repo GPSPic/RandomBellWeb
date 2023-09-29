@@ -1,11 +1,10 @@
 import Bell from "../bell/Bell";
-import "./HomePage.css"
+import "./HomePage.css";
 
 const HomePage = () => {
   return (
     <main>
-      <Bell />
-
+        <Bell />
     </main>
   );
 };

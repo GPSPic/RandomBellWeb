@@ -11,12 +11,12 @@ const Header = ({ switchTheme }) => {
           <ul>
             <li>
               <Link to="/">
-                <SmallText text="Link to Home" className="home-link" />
+                <SmallText text="Home" className="home-link" />
               </Link>
             </li>
             <li>
               <Link to="/about">
-                <SmallText text="Link to About" />
+                <SmallText text="About" />
               </Link>
             </li>
           </ul>
