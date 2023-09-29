@@ -29,11 +29,11 @@ const Container = () => {
   };
 
   return (
-    <div className={`${containerThemeClass} main-page`}>
+    <div className={`${containerThemeClass} container-box`}>
       <ThemeContext.Provider value={theme}>
         <Router>
           <Header switchTheme={switchTheme}/>
-          <Routes className="container-flexbox">
+          <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<About />} />
             <Route path="/*" element={<PageNotFound />} />

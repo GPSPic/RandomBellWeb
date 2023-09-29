@@ -5,6 +5,8 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    align-items: right;
+    flex: 1;    
 }
 
 .button-dark {
