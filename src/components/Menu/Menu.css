@@ -14,3 +14,17 @@ header {
 .theme-switch {
     flex: 1;
 }
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    flex: 3;
+}
+
+nav ul li {
+    padding: 0.5rem;
+}
