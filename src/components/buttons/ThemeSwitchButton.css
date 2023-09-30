@@ -2,11 +2,6 @@
     border: none;
     border-radius: 70%;
     padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    align-items: right;
-    flex: 1;    
 }
 
 .button-dark {

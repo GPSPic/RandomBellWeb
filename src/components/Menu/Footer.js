@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <footer>
         <Link to="/about">
-          <SmallText text="Link to About" />
+          <SmallText text="About" />
         </Link>
       </footer>
     </>

@@ -15,8 +15,8 @@ const Header = ({ switchTheme }) => {
               </Link>
             </li>
             <li>
-              <Link to="/about">
-                <SmallText text="About" />
+              <Link to="/setRoutine">
+                <SmallText text="Set Routine" />
               </Link>
             </li>
           </ul>
