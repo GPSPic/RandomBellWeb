@@ -8,4 +8,7 @@
       --transparent:transparent;
       --hover-dark:#333333;
       --hover-light:#bbbbbb;
+      --warning-background: #ff9800;
+      --warning-text-dark: #fff;
+      --warning-text-light: #fff;
 }

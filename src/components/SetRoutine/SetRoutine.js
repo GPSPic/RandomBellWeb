@@ -5,26 +5,43 @@ import EndTime from "./EndTime";
 import NumberOfRings from "./NumberOfRings";
 import DaysOfWeek from "./DaysOfWeek";
 import MinInterval from "./MinInterval";
-import "../../helpers/colours.css"
-import "./SetRoutine.css"
+import "../../helpers/colours.css";
+import "./SetRoutine.css";
 
 const SetRoutine = () => {
-    const [startTime, setStartTime] = useState("08:00")
-    const [endTime, setEndTime] = useState("20:00")
+  const [startTime, setStartTime] = useState("08:00");
+  const [endTime, setEndTime] = useState("20:00");
+  const [ringNum, setRingNum] = useState(0);
 
-    const handleStartTimeChange = (timeValue) => {
-        setStartTime(timeValue)
-    }
-    const handleEndTimeChange = (timeValue) => {
-        setEndTime(timeValue)
-    }
+  const handleStartTimeChange = (timeValue) => {
+    setStartTime(timeValue);
+  };
+  const handleEndTimeChange = (timeValue) => {
+    setEndTime(timeValue);
+  };
 
-    return ( 
-        <div className="set-routine">
-            <StartTime startTime={startTime} handleStartTimeChange={handleStartTimeChange}/>
-            <EndTime endTime={endTime} handleEndTimeChange={handleEndTimeChange}/>
-        </div>
-     );
-}
- 
+  const handleRingNumChange = (num) => {
+    setRingNum(num);
+  };
+
+  return (
+    <div className="set-routine">
+      <div className="set-times">
+        <StartTime
+          startTime={startTime}
+          handleStartTimeChange={handleStartTimeChange}
+        />
+        <EndTime endTime={endTime} handleEndTimeChange={handleEndTimeChange} />
+      </div>
+      <div>
+        <NumberOfRings
+          ringNum={ringNum}
+          handleRingNumChange={handleRingNumChange}
+        />
+        <MinInterval />
+      </div>
+    </div>
+  );
+};
+
 export default SetRoutine;

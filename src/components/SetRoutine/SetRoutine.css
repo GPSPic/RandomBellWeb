@@ -6,7 +6,7 @@
 .start-time {
     display: inline-flex;
     flex-direction: column;
-    flex:auto;
+    flex: auto;
     justify-content: center;
     align-items: center;
 }
@@ -14,8 +14,24 @@
 .end-time {
     display: inline-flex;
     flex-direction: column;
-    flex:auto;
+    flex: auto;
     justify-content: center;
     align-items: center;
 }
 
+.ring-num {
+    display: inline-flex;
+    flex-direction: column;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-warning {
+    text-align: center;
+    padding: 5px;
+    background-color: var(--warning-background);
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin: 5px;
+  }
