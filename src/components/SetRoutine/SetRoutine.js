@@ -33,7 +33,7 @@ const SetRoutine = () => {
         />
         <EndTime endTime={endTime} handleEndTimeChange={handleEndTimeChange} />
       </div>
-      <div>
+      <div className="number-interval-box">
         <NumberOfRings
           ringNum={ringNum}
           handleRingNumChange={handleRingNumChange}
