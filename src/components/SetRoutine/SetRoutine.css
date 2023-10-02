@@ -1,0 +1,12 @@
+.set-routine {
+    display: flex;
+}
+
+.start-time {
+    display: inline-flex;
+    flex-direction: column;
+    flex:auto;
+    justify-content: center;
+    align-items: center;
+}
+

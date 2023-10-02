@@ -1,12 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, createContext } from "react";
+
 import "./Container.css";
-import "../helpers/colours.css"
+import "../helpers/colours.css";
 import HomePage from "../components/HomePage/HomePage";
 import PageNotFound from "../components/PageNotFound";
 import About from "../components/HomePage/About";
 import Footer from "../components/Menu/Footer";
 import Header from "../components/Menu/Header";
+import SetRoutine from "../components/SetRoutine/SetRoutine";
 
 export const ThemeContext = createContext(null);
 
@@ -31,7 +33,7 @@ const Container = () => {
             <Header switchTheme={switchTheme} />
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/setRoutine" element={<HomePage />} />
+              <Route path="/setRoutine" element={<SetRoutine />} />
               <Route path="/about" element={<About />} />
               <Route path="/*" element={<PageNotFound />} />
             </Routes>
