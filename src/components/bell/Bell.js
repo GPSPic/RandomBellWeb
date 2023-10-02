@@ -3,6 +3,7 @@ import useSound from "use-sound";
 
 import { ThemeContext } from "../../containers/Container";
 import "./Bell.css";
+import "../../helpers/colours.css"
 import { bellDark, bellLight } from "../../helpers/icon";
 import bellChime from "../../helpers/sounds/happy-bell.mp3";
 

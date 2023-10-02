@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, createContext } from "react";
 import "./Container.css";
+import "../helpers/colours.css"
 import HomePage from "../components/HomePage/HomePage";
 import PageNotFound from "../components/PageNotFound";
 import About from "../components/HomePage/About";

@@ -1,7 +1,8 @@
 .bell-button {
     border: none;
-    padding: 20px;
-    background-color: transparent;
+    padding: 3%;
+    border-radius: 30%;
+    background-color: var(--transparent);
     min-height: auto;
     min-width: auto;
     max-height: max-content;
@@ -9,11 +10,11 @@
 }
 
 .bell-button-dark:hover {
-    background-color: #333333;
+    background-color: var(--hover-dark);
 }
 
 .bell-button-light:hover {
-    background-color: lightgray;
+    background-color: var(--hover-light);
 }
 
 .bell-box {

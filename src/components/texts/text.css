@@ -1,9 +1,9 @@
 .text-dark {
-    color: #fff
+    color:var(--text-dark)
 }
 
 .text-light {
-    color: #000
+    color: var(--text-light)
 }
 
 .small-text {

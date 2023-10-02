@@ -5,17 +5,17 @@
 }
 
 .button-dark {
-    background-color: #000;
+    background-color:var(--transparent);
 }
 
 .button-dark:hover {
-    background-color: #333333;
+    background-color: var(--hover-dark);
 }
 
 .button-light {
-    background-color: #fff
+    background-color:var(--transparent);
 }
 
 .button-light:hover {
-    background-color: #777777;
+    background-color: var(--hover-light);
   }

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import SmallText from "../texts/SmallText";
+import RegularText from "../texts/RegularText";
 import ThemeSwitchButton from "../buttons/ThemeSwitchButton";
 import "./Menu.css";
 
@@ -11,12 +11,12 @@ const Header = ({ switchTheme }) => {
           <ul>
             <li>
               <Link to="/">
-                <SmallText text="Home" className="home-link" />
+                <RegularText text="Home" className="home-link" />
               </Link>
             </li>
             <li>
               <Link to="/setRoutine">
-                <SmallText text="Set Routine" />
+                <RegularText text="Set Routine" />
               </Link>
             </li>
           </ul>

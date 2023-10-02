@@ -1,9 +1,9 @@
 .container-dark {
-  background-color: #000000;
+  background-color:var(--background-dark);
 }
 
 .container-light {
-  background-color: #fff;
+  background-color: var(--background-light);
 }
 .container-box{
   display:flex;

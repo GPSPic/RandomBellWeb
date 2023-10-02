@@ -1,7 +1,7 @@
 footer {
   flex-shrink: 0;
   padding: 20px;
-  align-self: center;
+  align-self: end;
 }
 
 header {
