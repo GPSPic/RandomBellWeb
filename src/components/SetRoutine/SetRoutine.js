@@ -25,7 +25,7 @@ const SetRoutine = () => {
   };
 
   return (
-    <div className="set-routine">
+    <main className="set-routine">
       <div className="set-times">
         <StartTime
           startTime={startTime}
@@ -40,7 +40,7 @@ const SetRoutine = () => {
         />
         <MinInterval />
       </div>
-    </div>
+    </main>
   );
 };
 
