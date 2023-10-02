@@ -1,10 +1,10 @@
-import SmallText from "../texts/SmallText";
-import "./HomePage.css"
+import Bell from "../bell/Bell";
+import "./HomePage.css";
 
 const HomePage = () => {
   return (
     <main>
-      <SmallText text="Home" />
+        <Bell />
     </main>
   );
 };

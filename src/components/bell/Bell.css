@@ -1,0 +1,24 @@
+.bell-button {
+    border: none;
+    padding: 20px;
+    background-color: transparent;
+    min-height: auto;
+    min-width: auto;
+    max-height: max-content;
+    max-width: max-content;
+}
+
+.bell-button-dark:hover {
+    background-color: #333333;
+}
+
+.bell-button-light:hover {
+    background-color: lightgray;
+}
+
+.bell-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
