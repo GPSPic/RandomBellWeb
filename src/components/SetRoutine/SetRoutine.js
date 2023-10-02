@@ -12,6 +12,7 @@ const SetRoutine = () => {
   const [startTime, setStartTime] = useState("08:00");
   const [endTime, setEndTime] = useState("20:00");
   const [ringNum, setRingNum] = useState(0);
+  const [minInterval, setMinInterval] = useState("00:30");
 
   const handleStartTimeChange = (timeValue) => {
     setStartTime(timeValue);
@@ -23,6 +24,10 @@ const SetRoutine = () => {
   const handleRingNumChange = (num) => {
     setRingNum(num);
   };
+
+    const handleMinIntChange = (interval) => {
+      setMinInterval(interval)
+  }
 
   return (
     <main className="set-routine">
@@ -38,7 +43,7 @@ const SetRoutine = () => {
           ringNum={ringNum}
           handleRingNumChange={handleRingNumChange}
         />
-        <MinInterval />
+        <MinInterval minInterval={minInterval} handleMinIntChange = {handleMinIntChange}/>
       </div>
     </main>
   );
