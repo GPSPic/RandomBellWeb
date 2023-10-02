@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import RegularText from '../texts/RegularText'
-
+import "./SetRoutine.css"
 const StartTime = ({startTime, handleStartTimeChange}) => {
     const [newStartTime, setNewStartTime] = useState(startTime)
 

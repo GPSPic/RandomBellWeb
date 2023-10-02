@@ -1,6 +1,6 @@
 import { useState } from "react"
 import RegularText from "../texts/RegularText"
-
+import "./SetRoutine.css"
 const EndTime = ({ endTime, handleEndTimeChange }) => {
     const [newEndTime, setNewEndTime] = useState(endTime)
     const handleChange = (e) => {
