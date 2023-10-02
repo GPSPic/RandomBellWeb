@@ -10,15 +10,19 @@ import "./SetRoutine.css"
 
 const SetRoutine = () => {
     const [startTime, setStartTime] = useState("08:00")
+    const [endTime, setEndTime] = useState("20:00")
 
     const handleStartTimeChange = (timeValue) => {
         setStartTime(timeValue)
+    }
+    const handleEndTimeChange = (timeValue) => {
+        setEndTime(timeValue)
     }
 
     return ( 
         <div className="set-routine">
             <StartTime startTime={startTime} handleStartTimeChange={handleStartTimeChange}/>
-
+            <EndTime endTime={endTime} handleEndTimeChange={handleEndTimeChange}/>
         </div>
      );
 }

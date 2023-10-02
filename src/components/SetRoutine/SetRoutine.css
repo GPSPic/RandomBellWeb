@@ -1,8 +1,17 @@
 .set-routine {
     display: flex;
+    flex-direction: column;
 }
 
 .start-time {
+    display: inline-flex;
+    flex-direction: column;
+    flex:auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.end-time {
     display: inline-flex;
     flex-direction: column;
     flex:auto;
