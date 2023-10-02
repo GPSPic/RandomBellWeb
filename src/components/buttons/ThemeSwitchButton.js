@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { moon, sun } from "../../helpers/icon";
 import { ThemeContext } from "../../containers/Container";
 import "./ThemeSwitchButton.css";
+import "../../helpers/colours.css"
 import SmallText from "../texts/SmallText";
 
 const ThemeSwitchButton = ({ switchTheme }) => {

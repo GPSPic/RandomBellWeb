@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../containers/Container";
 import "./text.css";
+import "../../helpers/colours.css"
 
 const LargeText = ({ text }) => {
   const theme = useContext(ThemeContext);

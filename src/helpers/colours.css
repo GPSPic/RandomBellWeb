@@ -1,0 +1,11 @@
+:root {
+      --background-dark: #000;
+      --background-light:#fff;
+      --text-dark:#fff;
+      --text-light: #000;
+      --bell-dark:#fff;
+      --bell-light: #000;
+      --transparent:transparent;
+      --hover-dark:#333333;
+      --hover-light:#bbbbbb;
+}
