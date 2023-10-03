@@ -45,20 +45,9 @@ const SetRoutine = () => {
               handleEndTimeChange={handleEndTimeChange}
             />
           </div>
-          <div className="days-selector">
-            <RegularText text="Repeat" />
-            <div className="day-button-box">
-             
-              
-              {/* <div className="day">
-                <lable>
-                  <SmallText text="Sunday" />
-                </lable>
-                <input type="checkbox" /> <br />
-              </div> */}
 
-            </div>
-          </div>
+          <DaysOfWeek />
+
           <div className="number-interval-box">
             <NumberOfRings
               ringNum={ringNum}

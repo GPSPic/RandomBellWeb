@@ -57,18 +57,36 @@
     transition: opacity 0.6s;
     margin: 5px;
   }
-.day-input-box{
+.day-button-box{
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    align-items: flex-end;
+    align-items: center;
 }
-.day{
+.day-button{
     display: flex;
     flex-direction: row;  
-    gap:10px 5px;
-}
+    margin: 0.2rem;
+    padding:0.5rem;
+    border-radius: 50%;
 
+    
+}
+.button-dark{
+    border:solid 1px var(--background-light);
+}
+.button-light{
+    border:solid 1px var(--background-dark);
+}
+.button-sizer{
+    display: flex;
+    min-height: 1.4rem;
+    min-width: 1.4rem;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+   
+}
 .days-selector{
     display: flex;
     flex-direction: column;
@@ -80,3 +98,6 @@
     margin-right: 20px;
     margin-top: 20px;   
   }
+/* .sunday-button{
+  color:var(--warning-background);
+} */
