@@ -5,14 +5,22 @@ import "../../helpers/colours.css";
 import { useState } from "react";
 
 const DaysOfWeek = () => {
-    const [mondaySelected, setMondaySelected] = useState(false)
-    const [tuesdaySelected, setTuesdaySelected] = useState(false)
-    const [wednesdaySelected, setWednesdaySelected] = useState(false)
-    const [thursdaySelected, setThursdaySelected] = useState(false)
-    const [fridaySelected, setFridaySelected] = useState(false)
-    const [saturdaySelected, setSaturdaySelected] = useState(false)
-    const [sundaySelected, setSundaySelected] = useState(false)
-    
+  const [daysSelected, setDaysSelected] = useState({
+    monday: false,
+    tuesday: false,
+    wednesday: false,
+    thursday: false,
+    friday: false,
+    saturday: false,
+    sunday: false,
+  });
+
+  const handleSelectedDay = (dayValue) => {
+    const newDaysSelected = {...daysSelected};
+    newDaysSelected[dayValue] = !daysSelected[dayValue]; 
+    setDaysSelected(newDaysSelected);
+  };
+
   const daysOfWeek = [
     "monday",
     "tuesday",
@@ -22,10 +30,16 @@ const DaysOfWeek = () => {
     "saturday",
     "sunday",
   ];
-    
 
   const displayDayButtons = daysOfWeek.map((day) => {
-    return <DayButton key={day} day={day} />;
+    return (
+      <DayButton
+        key={day}
+        day={day}
+        handleSelectedDay={handleSelectedDay}
+        buttonSelected={daysSelected[day] ? "button-selected" : "not-selected"}
+      />
+    );
   });
 
   return (
