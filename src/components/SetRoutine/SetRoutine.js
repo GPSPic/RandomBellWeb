@@ -47,50 +47,16 @@ const SetRoutine = () => {
           </div>
           <div className="days-selector">
             <RegularText text="Repeat" />
-            <div className="day-input-box">
-              <div className="day">
-                <lable>
-                  <SmallText text="Monday" />
-                </lable>
-                <input type="checkbox" /> <br />
-              </div>
-              <div className="day">
-                <lable>
-                  <SmallText text="Tuesday" />
-                </lable>
-                <input type="checkbox" /> <br />
-              </div>
-
-              <div className="day">
-                <lable>
-                  <SmallText text="Wednsday" />
-                </lable>
-                <input type="checkbox" /> <br />
-              </div>
-              <div className="day">
-                <lable>
-                  <SmallText text="Thursday" />
-                </lable>
-                <input type="checkbox" /> <br />
-              </div>
-              <div className="day">
-                <lable>
-                  <SmallText text="Friday" />
-                </lable>
-                <input type="checkbox" /> <br />
-              </div>
-              <div className="day">
-                <lable>
-                  <SmallText text="Saturday" />
-                </lable>
-                <input type="checkbox" /> <br />
-              </div>
-              <div className="day">
+            <div className="day-button-box">
+             
+              
+              {/* <div className="day">
                 <lable>
                   <SmallText text="Sunday" />
                 </lable>
                 <input type="checkbox" /> <br />
-              </div>
+              </div> */}
+
             </div>
           </div>
           <div className="number-interval-box">
