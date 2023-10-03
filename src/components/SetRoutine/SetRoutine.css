@@ -1,29 +1,42 @@
 .set-routine {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 10px 20px;
+    align-items: baseline;
+    justify-content: space-evenly;
+    margin-top: 10%;
 }
-
+.set-times{
+    display: inline-flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+}
 .start-time {
     display: inline-flex;
     flex-direction: column;
-    flex: auto;
-    justify-content: center;
     align-items: center;
 }
 
 .end-time {
     display: inline-flex;
     flex-direction: column;
-    flex: auto;
-    justify-content: center;
     align-items: center;
 }
-
+.number-interval-box{
+    display: inline-flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+}
 .ring-num {
     display: inline-flex;
     flex-direction: column;
-    flex: auto;
-    justify-content: center;
+    align-items: center;
+}
+.min-interval{
+    display: inline-flex;
+    flex-direction: column;
     align-items: center;
 }
 
