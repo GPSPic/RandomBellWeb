@@ -2,25 +2,9 @@ import RegularText from "../texts/RegularText";
 import DayButton from "./DayButton";
 import "./SetRoutine.css";
 import "../../helpers/colours.css";
-import { useState } from "react";
 
-const DaysOfWeek = () => {
-  const [daysSelected, setDaysSelected] = useState({
-    monday: false,
-    tuesday: false,
-    wednesday: false,
-    thursday: false,
-    friday: false,
-    saturday: false,
-    sunday: false,
-  });
-
-  const handleSelectedDay = (dayValue) => {
-    const newDaysSelected = {...daysSelected};
-    newDaysSelected[dayValue] = !daysSelected[dayValue]; 
-    setDaysSelected(newDaysSelected);
-  };
-
+const DaysOfWeek = ({daysSelected, handleSelectedDay}) => {
+  
   const daysOfWeek = [
     "monday",
     "tuesday",

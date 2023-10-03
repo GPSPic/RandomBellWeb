@@ -150,16 +150,36 @@ input{
     min-height:2rem;
     min-width: 5rem;
     padding:5px;
-    
 }
 
-.sbt-btn-dark{
+.sbt-btn:active {
+    transform: translateY(1px);
+}
+
+.sbt-btn-dark:hover p::after {
+    content: " >>";
+    color: var(--text-dark);
+}
+
+.sbt-btn-dark {
     background-color: var(--sbt-btn-dark);
     border: solid 1px var(--background-light)
 }
 
-.sbt-btn-light{
+.sbt-btn-dark:hover {
+    background-color: var(--hover-dark);
+}
+
+.sbt-btn-light {
     background-color: var(--sbt-btn-light);
     border: solid 1px var(--background-dark)
 }
 
+.sbt-btn-light:hover {
+    background-color: var(--hover-light);
+}
+
+.sbt-btn-light:hover p::after {
+    content: " >>";
+    color: var(--text-light);
+}
