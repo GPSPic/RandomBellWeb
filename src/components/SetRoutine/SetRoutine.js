@@ -7,6 +7,8 @@ import DaysOfWeek from "./DaysOfWeek";
 import MinInterval from "./MinInterval";
 import "../../helpers/colours.css";
 import "./SetRoutine.css";
+import RegularText from "../texts/RegularText";
+import SmallText from "../texts/SmallText";
 
 const SetRoutine = () => {
   const [startTime, setStartTime] = useState("08:00");
@@ -25,26 +27,85 @@ const SetRoutine = () => {
     setRingNum(num);
   };
 
-    const handleMinIntChange = (interval) => {
-      setMinInterval(interval)
-  }
+  const handleMinIntChange = (interval) => {
+    setMinInterval(interval);
+  };
 
   return (
-    <main className="set-routine">
-      <div className="set-times">
-        <StartTime
-          startTime={startTime}
-          handleStartTimeChange={handleStartTimeChange}
-        />
-        <EndTime endTime={endTime} handleEndTimeChange={handleEndTimeChange} />
-      </div>
-      <div className="number-interval-box">
-        <NumberOfRings
-          ringNum={ringNum}
-          handleRingNumChange={handleRingNumChange}
-        />
-        <MinInterval minInterval={minInterval} handleMinIntChange = {handleMinIntChange}/>
-      </div>
+    <main className="routine-main">
+      <form className="routine-form">
+        <div className="set-routine">
+          <div className="set-times">
+            <StartTime
+              startTime={startTime}
+              handleStartTimeChange={handleStartTimeChange}
+            />
+            <EndTime
+              endTime={endTime}
+              handleEndTimeChange={handleEndTimeChange}
+            />
+          </div>
+          <div className="days-selector">
+            <RegularText text="Repeat" />
+            <div className="day-input-box">
+              <div className="day">
+                <lable>
+                  <SmallText text="Monday" />
+                </lable>
+                <input type="checkbox" /> <br />
+              </div>
+              <div className="day">
+                <lable>
+                  <SmallText text="Tuesday" />
+                </lable>
+                <input type="checkbox" /> <br />
+              </div>
+
+              <div className="day">
+                <lable>
+                  <SmallText text="Wednsday" />
+                </lable>
+                <input type="checkbox" /> <br />
+              </div>
+              <div className="day">
+                <lable>
+                  <SmallText text="Thursday" />
+                </lable>
+                <input type="checkbox" /> <br />
+              </div>
+              <div className="day">
+                <lable>
+                  <SmallText text="Friday" />
+                </lable>
+                <input type="checkbox" /> <br />
+              </div>
+              <div className="day">
+                <lable>
+                  <SmallText text="Saturday" />
+                </lable>
+                <input type="checkbox" /> <br />
+              </div>
+              <div className="day">
+                <lable>
+                  <SmallText text="Sunday" />
+                </lable>
+                <input type="checkbox" /> <br />
+              </div>
+            </div>
+          </div>
+          <div className="number-interval-box">
+            <NumberOfRings
+              ringNum={ringNum}
+              handleRingNumChange={handleRingNumChange}
+            />
+            <MinInterval
+              minInterval={minInterval}
+              handleMinIntChange={handleMinIntChange}
+            />
+          </div>
+        </div>
+        <button className="form-btn">submit</button>
+      </form>
     </main>
   );
 };

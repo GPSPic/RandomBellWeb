@@ -1,3 +1,12 @@
+.routine-main{
+    
+    flex-direction: column;
+}
+.routine-form{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 .set-routine {
     display: flex;
     justify-content: center;
@@ -47,4 +56,27 @@
     opacity: 1;
     transition: opacity 0.6s;
     margin: 5px;
+  }
+.day-input-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: flex-end;
+}
+.day{
+    display: flex;
+    flex-direction: row;  
+    gap:10px 5px;
+}
+
+.days-selector{
+    display: flex;
+    flex-direction: column;
+    
+}
+.form-btn{
+    display: flex;
+    align-self: flex-end;
+    margin-right: 20px;
+    margin-top: 20px;   
   }

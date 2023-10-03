@@ -2,4 +2,8 @@ main {
     display: flex;
     flex: 1;
 }
-
+.about{
+    margin: 20px;
+    padding: 20px;
+    
+}
