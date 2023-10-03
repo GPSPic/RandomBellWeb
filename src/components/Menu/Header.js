@@ -11,7 +11,7 @@ const Header = ({ switchTheme }) => {
           <ul>
             <li>
               <Link to="/">
-                <RegularText text="Home" className="home-link" />
+                <RegularText text="Bell" className="home-link" />
               </Link>
             </li>
             <li>

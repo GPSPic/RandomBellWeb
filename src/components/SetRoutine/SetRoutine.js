@@ -7,8 +7,7 @@ import DaysOfWeek from "./DaysOfWeek";
 import MinInterval from "./MinInterval";
 import "../../helpers/colours.css";
 import "./SetRoutine.css";
-import RegularText from "../texts/RegularText";
-import SmallText from "../texts/SmallText";
+import SubmitButton from "./SubmitButton";
 
 const SetRoutine = () => {
   const [startTime, setStartTime] = useState("08:00");
@@ -33,7 +32,7 @@ const SetRoutine = () => {
 
   return (
     <main className="routine-main">
-      <form className="routine-form">
+      <div className="routine-box">
         <div className="set-routine">
           <div className="set-times">
             <StartTime
@@ -59,8 +58,8 @@ const SetRoutine = () => {
             />
           </div>
         </div>
-        <button className="form-btn">submit</button>
-      </form>
+       <SubmitButton />
+      </div>
     </main>
   );
 };

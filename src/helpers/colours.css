@@ -15,4 +15,8 @@
       --button-selected-light: #bbbbbb;
       --button-selected-light-hover: #333333;
       --button-selected-dark-hover: #bbbbbb;
+      --header-border: #555555;
+      --footer-border:#555555;
+      --sbt-btn-dark:#000;
+      --sbt-btn-light:#fff;
 }
