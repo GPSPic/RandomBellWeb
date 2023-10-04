@@ -3,8 +3,7 @@ import DayButton from "./DayButton";
 import "./SetRoutine.css";
 import "../../helpers/colours.css";
 
-const DaysOfWeek = ({daysSelected, handleSelectedDay}) => {
-  
+const DaysOfWeek = ({ daysSelected, handleSelectedDay }) => {
   const daysOfWeek = [
     "monday",
     "tuesday",
