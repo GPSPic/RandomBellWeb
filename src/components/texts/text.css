@@ -17,3 +17,15 @@
 .large-text {
     font-size: 48px;
 }
+
+.warning-text {
+    font-size: 18px;
+}
+
+.warning-text-dark {
+    color: var(--warning-text-dark);
+}
+
+.warning-text-light {
+    color: var(--warning-text-light);
+}
