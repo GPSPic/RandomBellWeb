@@ -14,40 +14,44 @@ export const ThemeContext = createContext(null);
 
 const Container = () => {
   const [theme, setTheme] = useState("dark");
-  const [startTime, setStartTime] = useState("08:00");
-  const [endTime, setEndTime] = useState("20:00");
-  const [ringNum, setRingNum] = useState(0);
-  const [minInterval, setMinInterval] = useState("00:30");
-  const [daysSelected, setDaysSelected] = useState({
-    monday: false,
-    tuesday: false,
-    wednesday: false,
-    thursday: false,
-    friday: false,
-    saturday: false,
-    sunday: false,
+
+  const [routineSettings, setRoutineSettings] = useState({
+    startTime: "08:00",
+    endTime: "20:00",
+    ringNum: 0,
+    minInterval: "00:30",
+    daysSelected: {
+      monday: false,
+      tuesday: false,
+      wednesday: false,
+      thursday: false,
+      friday: false,
+      saturday: false,
+      sunday: false,
+    },
   });
+
   const containerThemeClass = "container-" + theme;
 
   const handleStartTimeChange = (timeValue) => {
-    setStartTime(timeValue);
+    setRoutineSettings({ ...routineSettings, startTime: timeValue });
   };
   const handleEndTimeChange = (timeValue) => {
-    setEndTime(timeValue);
+    setRoutineSettings({ ...routineSettings, endTime: timeValue });
   };
 
   const handleRingNumChange = (num) => {
-    setRingNum(num);
+    setRoutineSettings({ ...routineSettings, ringNum: num });
   };
 
   const handleMinIntChange = (interval) => {
-    setMinInterval(interval);
+    setRoutineSettings({ ...routineSettings, minInterval: interval });
   };
 
   const handleSelectedDay = (dayValue) => {
-    const newDaysSelected = { ...daysSelected };
-    newDaysSelected[dayValue] = !daysSelected[dayValue];
-    setDaysSelected(newDaysSelected);
+    const newDaysSelected = { ...routineSettings.daysSelected };
+    newDaysSelected[dayValue] = !routineSettings.daysSelected[dayValue];
+    setRoutineSettings({...routineSettings, daysSelected: newDaysSelected});
   };
 
   const switchTheme = function () {
@@ -70,11 +74,11 @@ const Container = () => {
                 path="/setRoutine"
                 element={
                   <SetRoutine
-                    startTime={startTime}
-                    endTime={endTime}
-                    ringNum={ringNum}
-                    minInterval={minInterval}
-                    daysSelected={daysSelected}
+                    startTime={routineSettings.startTime}
+                    endTime={routineSettings.endTime}
+                    ringNum={routineSettings.ringNum}
+                    minInterval={routineSettings.minInterval}
+                    daysSelected={routineSettings.daysSelected}
                     handleStartTimeChange={handleStartTimeChange}
                     handleEndTimeChange={handleEndTimeChange}
                     handleRingNumChange={handleRingNumChange}
