@@ -21,12 +21,10 @@ const NumberOfRings = ({ ringNum, handleRingNumChange }) => {
   const numberOutOfBounds = () => {
     if (error) {
       return (
-        <div className="alert-warning">
           <WarningText
             mainAlert="Warning! "
             text="You can only enter numbers between 0 and 720!!!"
           />
-        </div>
       );
     }
   };

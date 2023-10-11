@@ -6,25 +6,28 @@ import NumberOfRings from "./NumberOfRings";
 import DaysOfWeek from "./DaysOfWeek";
 import MinInterval from "./MinInterval";
 import SubmitButton from "./SubmitButton";
+import { getIntervalLength, minuteConverter, totalLengthOfTime } from "../../helpers/randomiser/randomiser";
 import "../../helpers/colours.css";
 import "./SetRoutine.css";
 
-
 const SetRoutine = ({
-  startTime,
-  endTime,
-  minInterval,
-  ringNum,
-  daysSelected,
+  routineSettings,
   handleStartTimeChange,
   handleEndTimeChange,
   handleRingNumChange,
   handleMinIntChange,
   handleSelectedDay,
+  handleSubmitRandomTimes
 }) => {
+
+  const startTime = routineSettings.startTime
+  const endTime = routineSettings.endTime
+  const ringNum = routineSettings.ringNum
+  const routineFractionMinValue = getIntervalLength(minuteConverter(startTime), minuteConverter(endTime), ringNum)
+
   return (
     <main className="routine-main">
-      <div className="routine-box">
+      <form className="routine-box">
         <div className="set-routine">
           <div className="set-times">
             <StartTime
@@ -35,10 +38,11 @@ const SetRoutine = ({
               endTime={endTime}
               handleEndTimeChange={handleEndTimeChange}
             />
+            {totalLengthOfTime(minuteConverter(routineSettings.startTime), minuteConverter(routineSettings.endTime))}
           </div>
 
           <DaysOfWeek
-            daysSelected={daysSelected}
+            daysSelected={routineSettings.daysSelected}
             handleSelectedDay={handleSelectedDay}
           />
 
@@ -48,19 +52,17 @@ const SetRoutine = ({
               handleRingNumChange={handleRingNumChange}
             />
             <MinInterval
-              minInterval={minInterval}
+              minInterval={routineSettings.minInterval}
               handleMinIntChange={handleMinIntChange}
+              routineFractionMinValue={routineFractionMinValue}
             />
           </div>
         </div>
-        <SubmitButton 
-          startTime={startTime}
-          endTime={endTime}
-          ringNum={ringNum}
-          minInterval={minInterval}
-          daysSelected={daysSelected}
+        <SubmitButton
+          routineSettings={routineSettings}
+          handleSubmitRandomTimes={handleSubmitRandomTimes}
         />
-      </div>
+      </form>
     </main>
   );
 };

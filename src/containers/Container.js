@@ -15,6 +15,8 @@ export const ThemeContext = createContext(null);
 const Container = () => {
   const [theme, setTheme] = useState("dark");
 
+  const [randomTimes, setRandomTimes] = useState({});
+
   const [routineSettings, setRoutineSettings] = useState({
     startTime: "08:00",
     endTime: "20:00",
@@ -32,6 +34,10 @@ const Container = () => {
   });
 
   const containerThemeClass = "container-" + theme;
+
+  const handleSubmitRandomTimes = (timesObject) => {
+    setRandomTimes(timesObject);
+  };
 
   const handleStartTimeChange = (timeValue) => {
     setRoutineSettings({ ...routineSettings, startTime: timeValue });
@@ -51,7 +57,7 @@ const Container = () => {
   const handleSelectedDay = (dayValue) => {
     const newDaysSelected = { ...routineSettings.daysSelected };
     newDaysSelected[dayValue] = !routineSettings.daysSelected[dayValue];
-    setRoutineSettings({...routineSettings, daysSelected: newDaysSelected});
+    setRoutineSettings({ ...routineSettings, daysSelected: newDaysSelected });
   };
 
   const switchTheme = function () {
@@ -74,16 +80,13 @@ const Container = () => {
                 path="/setRoutine"
                 element={
                   <SetRoutine
-                    startTime={routineSettings.startTime}
-                    endTime={routineSettings.endTime}
-                    ringNum={routineSettings.ringNum}
-                    minInterval={routineSettings.minInterval}
-                    daysSelected={routineSettings.daysSelected}
+                    routineSettings={routineSettings}
                     handleStartTimeChange={handleStartTimeChange}
                     handleEndTimeChange={handleEndTimeChange}
                     handleRingNumChange={handleRingNumChange}
                     handleMinIntChange={handleMinIntChange}
                     handleSelectedDay={handleSelectedDay}
+                    handleSubmitRandomTimes={handleSubmitRandomTimes}
                   />
                 }
               />

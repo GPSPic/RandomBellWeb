@@ -15,4 +15,12 @@
   flex-direction: column;
   min-height: 95vh;
 }
- 
+
+#alert-warning {
+  text-align: center;
+  padding: 5px;
+  background-color: var(--warning-background);
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin: 5px;
+}

@@ -8,8 +8,6 @@ const DayButton = ({ day, handleSelectedDay, buttonSelected }) => {
   const buttonBackground = "day-button-" + theme;
   const buttonSelectedTheme = buttonSelected + "-" + theme;
 
-  // console.log(buttonSelectedTheme);
-
   const handleClick = (e) => {
     e.preventDefault();
     handleSelectedDay(e.currentTarget.value);
