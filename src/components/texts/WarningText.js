@@ -8,7 +8,7 @@ const WarningText = ({ mainAlert, text }) => {
   const warningTextTheme = "warning-text-" + theme;
 
   return (
-    <div className={`${warningTextTheme} warning-text`} id="alert-warning">
+    <div className={`${warningTextTheme} warning-text alert-warning`}>
       
       <p><strong>{mainAlert}</strong>{text}</p>
     </div>

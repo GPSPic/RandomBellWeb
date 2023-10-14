@@ -16,7 +16,7 @@
   min-height: 95vh;
 }
 
-#alert-warning {
+.alert-warning {
   text-align: center;
   padding: 5px;
   background-color: var(--warning-background);

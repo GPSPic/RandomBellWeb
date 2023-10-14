@@ -9,6 +9,7 @@ import SubmitButton from "./SubmitButton";
 import { getIntervalLength, minuteConverter, totalLengthOfTime } from "../../helpers/randomiser/randomiser";
 import "../../helpers/colours.css";
 import "./SetRoutine.css";
+import WarningText from "../texts/WarningText";
 
 const SetRoutine = ({
   routineSettings,
@@ -20,10 +21,13 @@ const SetRoutine = ({
   handleSubmitRandomTimes
 }) => {
 
-  const startTime = routineSettings.startTime
-  const endTime = routineSettings.endTime
-  const ringNum = routineSettings.ringNum
+  const [startTime, endTime, ringNum] = [routineSettings.startTime, routineSettings.endTime, routineSettings.ringNum]
   const routineFractionMinValue = getIntervalLength(minuteConverter(startTime), minuteConverter(endTime), ringNum)
+  const lengthErrorDisplay = function () {
+    if (!totalLengthOfTime(minuteConverter(startTime), minuteConverter(endTime))) {
+     return <WarningText mainAlert="Warning! " text="Your end time needs to be later than your start time (for now)" />
+   } 
+  } 
 
   return (
     <main className="routine-main">
@@ -38,7 +42,7 @@ const SetRoutine = ({
               endTime={endTime}
               handleEndTimeChange={handleEndTimeChange}
             />
-            {totalLengthOfTime(minuteConverter(routineSettings.startTime), minuteConverter(routineSettings.endTime))}
+            {lengthErrorDisplay()}
           </div>
 
           <DaysOfWeek
