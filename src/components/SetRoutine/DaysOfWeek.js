@@ -28,7 +28,7 @@ const DaysOfWeek = ({ daysSelected, handleSelectedDay }) => {
   return (
     <div className="days-selector">
       <RegularText text="Repeat" />
-      <div className="day-button-box">{displayDayButtons}</div>
+      <ul className="day-button-box">{displayDayButtons}</ul>
     </div>
   );
 };
