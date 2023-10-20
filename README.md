@@ -1,4 +1,18 @@
-# Getting Started with Create React App
+# Random Bell Web
+
+## Uses
+Random Bell Web is a webapp meant for those who want to get a reminder to take a breath, a drink, practise interval training, and a myriad of over goals.
+
+## Status
+
+This app currently only consists of a React JS front-end which will in time be able to provide a semi-random ringing tone based on specified parameters selected by the user *under construction*.
+
+This project is updated regularly as of *19/10/2023*. Current tasks are generating a function that will trigger a ring at the randomly generated times (involves checking the times, adding function/element to block the ringing).
+In parallel, the creators wish to include a backend to handle profiles, multiple saved routines and authentication. This will likely make use of Java Spring, with either Spring Security or Auth0 integration (under discussion).
+
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
