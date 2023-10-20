@@ -16,22 +16,24 @@ const DayButton = ({ day, handleSelectedDay, buttonSelected }) => {
   };
 
   return (
-    <button
-      id={day}
-      value={day}
-      className={
-        `${day}` +
-        "-button day-button " +
-        buttonBackground +
-        " " +
-        buttonSelectedTheme
-      }
-      onClick={handleClick}
-    >
-      <div className="button-sizer">
-        <SmallText text={day[0].toUpperCase() + day[1] + day[2]} />
-      </div>
-    </button>
+    <li>
+      <button
+        id={day}
+        value={day}
+        className={
+          `${day}` +
+          "-button day-button " +
+          buttonBackground +
+          " " +
+          buttonSelectedTheme
+        }
+        onClick={handleClick}
+      >
+        <div className="button-sizer">
+          <SmallText text={day[0].toUpperCase() + day[1] + day[2]} />
+        </div>
+      </button>
+    </li>
   );
 };
 
